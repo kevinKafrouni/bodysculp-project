@@ -13,3 +13,7 @@ left to do : 1-add a blog page with workouts and meal plans
               2-add a sign in to go to a personalised page
               3- SEO optimisation
 
+              -add a i want to receive weekly workout in my mail on the contact page
+              -add a workout challenge and the ability to upload your own workout
+              -add a random chalenge generator 
+
