@@ -12,6 +12,14 @@ a{
 a:active,a:hover{
   outline:0
 }
+
+a.icon{
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
 h1{font-size:2em;margin:.67em 0}
 img{border:0}
 
@@ -116,6 +124,18 @@ figcaption {
   text-align: center;
 }
 
+
+.hidden{
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1.5s;
+}
+.show{
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
 /*AFFECTS ALL THE HMTL PAGES*/
 /*affect only main.html */
 /*affect only pricing.html */
@@ -136,7 +156,8 @@ figcaption {
 }
 
 .navigation-container {
-  position: static;
+  position: relative;
+  overflow: hidden;
   left: 0%;
   top: 0%;
   right: 0%;
@@ -159,6 +180,7 @@ figcaption {
 .header {
   display: flex;
   width: 100%;
+  max-width: 1455px;
   margin-top: -90px;
   padding: 210px 30px 120px;
   justify-content: center;
@@ -325,6 +347,26 @@ figcaption {
   flex-wrap: wrap;
   align-items: center;
 }
+/*blog posts*/
+.blog-section{
+  display: block;
+}
+.blog-post{
+  display: block;
+  width: 33%;
+  height: 200px;
+}
+
+.blog-title{
+  width: 33%;
+  height: 50px;
+  background-color: grey;
+  font-weight: bold;
+}
+.blog-img{
+    height:100px;
+}
+
 
 .container.cc-contact {
   display: flex;
@@ -507,7 +549,7 @@ figcaption {
 }
 
 .link:hover {
-  color: #48944f;
+  color: orangered;
 }
 
 .separator {
@@ -683,12 +725,12 @@ figcaption {
   margin-right: 15px;
   justify-content: center;
   align-items: center;
-  font-size: 60px;
+  font-size: xx-large;
 }
 
 .footer-social {
   position: relative;
-  left: 200px;
+  left: 150px;
   top: -117px;
   right: -200px;
   display: flex;
@@ -787,6 +829,7 @@ figcaption {
   display: flex;
   width: 100vw;
   max-height: 720px;
+  max-width: 1455px;
   padding: 120px 30px;
   justify-content: center;
   align-items: center;
@@ -1247,10 +1290,6 @@ figcaption {
   align-items: center;
 }
 
-.title-logo{
-  width:50px;
-  height: 50px;
-}
 
 .nav-menu {
   display: flex;
@@ -1353,7 +1392,7 @@ span.psw {
 .modal {
   display: none; 
   position: fixed;
-  z-index: 999; 
+  z-index: 99; 
   left: 0;
   top: 0;
   width: 100%; 
@@ -1580,11 +1619,11 @@ span.psw {
   }
 
   .menu-button:active {
-    background-color: #5ab963;
+    background-color: orange;
   }
 
   .menu-button {
-    background-color: #5ab963;
+    background-color: orange;
   }
 }
 
@@ -1817,6 +1856,9 @@ span.psw {
 }
 
 @media screen and (max-width: 479px) {
+  .nav-menu {
+    display: none;
+  }
   .navigation-container {
     height: 60px;
   }

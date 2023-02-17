@@ -6,16 +6,16 @@
   <meta content="width=device-width, initial-scale=1" name="viewport" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="styles.css" rel="stylesheet" type="text/css" />
-  <link href="img\logomain.png" rel="shortcut icon" type="image/x-icon" class="title-logo" />
-  <script src="website\script.js"></script>
+  <link href="img\logomain1.png" rel="shortcut icon" type="image/x-icon" class="title-logo" />
+  <script defer src="script.js"></script>
 </head>
 
 <body class="body">
-  <div data-collapse="medium" data-animation="default" data-duration="400" data-easing="ease-out"
-    data-easing2="ease-out" role="banner" class="navigation ">
+
+  <div class="navigation ">
     <div class="navigation-container">
       <a href="main.html" aria-current="page" class="logo"><img src="img\mainlogo1.png" alt="" /></a>
-      <nav role="navigation" class="nav-menu">
+      <nav role="navigation" class="nav-menu" id="links">
         <a href="features.html" class="nav-link">Features</a>
         <a href="pricing.html" class="nav-link">Pricing</a>
         <a href="about.html" class="nav-link">About</a>
@@ -48,6 +48,9 @@
             <label for="country"><b>Country</b></label>
             <select name="country" id="country" class ="account-input" >
               <option value="c1">Lebanon</option>
+              <option value="c1">USA</option>
+              <option value="c1">UK</option>
+              <option value="c1">Germany</option>
             </select>
             <label for="psw"><b>Password</b></label>
             <input type="password" placeholder="Enter Password" name="psw" class ="account-input" required>
@@ -78,14 +81,14 @@
   <div class="features wf-section">
     <div class="container">
       <div class="h2-container">
-        <h2 class="h2"><span class="text-span">At Body Sculpt, our goal is simple: to help you achieve your health and
+        <h2 class="h2"><span class="text-span hidden">At Body Sculpt, our goal is simple: to help you achieve your health and
             wellness goals and live your best life.</span><br /></h2>
       </div>
       <div class="collection-list-wrapper">
         <div role="list" class="collection-list">
           <div role="listitem" class="collection-item">
-            <div class="feature-item-container">
-              <div class="feature-icon"><img width="50" height="50"
+            <div class="feature-item-container hidden">
+              <div class="feature-icon "><img width="50" height="50"
                   src="icons\comunity-icon.png"
                   alt="" class="image-3" /></div>
               <h3 class="h3">Community Support</h3>
@@ -94,7 +97,7 @@
             </div>
           </div>
           <div role="listitem" class="collection-item">
-            <div class="feature-item-container">
+            <div class="feature-item-container hidden">
               <div class="feature-icon"><img width="50" height="50"
                   src="icons\personalization-icon.png"
                   alt="" class="image-3" /></div>
@@ -104,7 +107,7 @@
             </div>
           </div>
           <div role="listitem" class="collection-item">
-            <div class="feature-item-container">
+            <div class="feature-item-container hidden">
               <div class="feature-icon"><img width="50" height="50"
                   src="icons\personal-trainer-icon.png"
                   alt="" class="image-3" /></div>
@@ -121,7 +124,7 @@
   <div class="about wf-section">
     <div class="container cc-center">
       <div class="h2-container cc-center">
-        <h2 class="h2 cc-center"><span class="text-span">We're a team of fitness professionals dedicated to helping
+        <h2 class="h2 cc-center hidden"><span class="text-span">We're a team of fitness professionals dedicated to helping
             you achieve your health and wellness goals. </span>We believe that fitness is about more than just exercise
           - it's about building a community of like-minded individuals who support and motivate each other</h2><a
           href="about.html" class="link">More About Us</a>
@@ -130,29 +133,31 @@
   </div>
   <div class="blog-section">
     <div class="blog-post">
-      <div class="blog-img"></div>
-      <div class="blog-title"></div>
+      <div class="blog-img">
+        <img src="img\Picture5.png" alt="">
+      </div>
+      <div class="blog-title">best 10 workouts to start your journey</div>
     </div>
     
   </div>
-  <div class="separator cc-background-grey wf-section">
+  <div class="separator cc-background-grey">
     <div class="container">
       <div class="line-color"></div>
     </div>
   </div>
-  <div class="separator cc-background-grey wf-section">
+  <div class="separator cc-background-grey">
     <div class="container">
       <div class="line-color"></div>
     </div>
   </div>
-  <div class="cta wf-section">
+  <div class="cta">
     <div class="container cc-cta">
       <div class="cta-column">
         <div class="cta-left-top">
-          <h3 class="h3 cc-cta">Party On</h3>
+          <h3 class="h3 cc-cta hidden">Party On</h3>
           <div class="cta-line"></div>
         </div>
-        <h2 class="h2"><span class="text-span">The journey of a thousand miles begins with a single step .</span> </h2>
+        <h2 class="h2"><span class="text-span hidden">The journey of a thousand miles begins with a single step .</span> </h2>
       </div>
       <div class="cta-column"><a href="contact.html" class="button cc-cta ">Get Started</a></div>
     </div>

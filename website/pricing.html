@@ -9,26 +9,66 @@
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link href="styles.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="img\logomain.png" rel="shortcut icon" type="image/x-icon" />
+    <link href="img\logomain1.png" rel="shortcut icon" type="image/x-icon" />
 </head>
 
 <body>
-    <div data-collapse="medium" data-animation="default" data-duration="400" data-easing="ease-out"
-    data-easing2="ease-out" role="banner" class="navigation">
-    <div class="navigation-container"><a href="main.html" aria-current="page" class="logo"><img
+    <div class="navigation">
+    <div class="navigation-container">
+        <a href="main.html" aria-current="page" class="logo"><img
           src="img\mainlogo1.png"
           alt="" /></a>
-      <nav role="navigation" class="nav-menu"><a href="features.html" class="nav-link">Features</a><a href="pricing.html"
-          class="nav-link">Pricing</a><a href="about.html" class="nav-link">About</a>
-        <div class="bullet"></div>
-        <a href="" class="nav-link">Sign in</a>
-        <a href="#"class="navigation-button">Get Started</a>
-      </nav>
-      <div class="menu-button">
-        <div class="icon-2"></div>
-      </div>
+      <nav role="navigation" class="nav-menu">
+        <a href="features.html" class="nav-link">Features</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="about.html" class="nav-link">About</a>
+        <button onclick="document.getElementById('login-form').style.display='block'" class="navigation-button">Login</button>
+     </nav>
+        <div id="login-form" class="modal">
+        <form class="modal-content animate" action="/action_page.php" method="post">
+            <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" class ="account-input" required>
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" class ="account-input" required>
+            <button type="submit">Login</button>
+            <label><input type="checkbox" checked="checked" name="remember"> Remember me</label>
+            </div>
+            <div class="container" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('login-form').style.display='none'" class="cancelbtn">Cancel</button>
+            <span class="psw"><button class="newaccbtn" onclick="document.getElementById('login-form').style.display='none';document.getElementById('signup-form').style.display='block';"> Create a new account</button></span>
+            </div>
+        </form>
+        </div>
+        <div id="signup-form" class="modal">
+        <form class="modal-content animate" action="/action_page.php" method="post">
+            <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" class ="account-input" required>
+            <label for="age"><b>age</b></label>
+            <input type="number"  name="age" min="15" max="120" class ="account-input" required>
+            <label for="country"><b>Country</b></label>
+            <select name="country" id="country" class ="account-input" >
+                <option value="c1">Lebanon</option>
+                <option value="c1">USA</option>
+                <option value="c1">UK</option>
+                <option value="c1">Germany</option>
+            </select>
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" class ="account-input" required>
+            <label for="mail"><b>Email</b></label>
+            <input type="Email" placeholder="fit@gmail.com" name="mail" class ="account-input" required>
+            <button type="submit" onclick="document.getElementById('login-form').style.display='block';document.getElementById('signup-form').style.display='none';">Login</button>
+            <label><input type="checkbox" checked="checked" name="remember"> Remember me</label><br>
+            <label><input type="checkbox" name="mailbox"> Receive Emails</label>
+            </div>
+            <div class="container" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('signup-form').style.display='none'" class="cancelbtn">Cancel</button>
+            </div>
+        </form>
+        </div>
     </div>
-    </div>
+   </div>
     <div class="header-inner">
         <div class="container">
             <div class="header-inner-content">
@@ -162,11 +202,11 @@
         <div class="container cc-cta">
             <div class="cta-column">
                 <div class="cta-left-top">
-                    <h3 class="h3 cc-cta">Party On</h3>
+                    <h3 class="h3 cc-cta">Party On</h3><br>
                     <div class="cta-line"></div>
-                </div>
+                </div><br>
                 <h2 class="h2"><span class="text-span">
-                        don't wait for tomorrow, start today.</span> </h2>
+                        <br><br>don't wait for tomorrow, start today.</span> </h2>
             </div>
             <div class="cta-column"><a href="contact.html" class="button cc-cta">Get Started</a></div>
         </div>
