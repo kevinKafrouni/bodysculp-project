@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous" />
     <link href="img\logomain1.png" rel="shortcut icon" type="image/x-icon" />
+    <script defer src="script.js"></script>
 </head>
 
 <body>
@@ -21,7 +22,7 @@
           alt="" /></a>
       <nav role="navigation" class="nav-menu"><a href="features.html" class="nav-link">Features</a><a href="pricing.html"
           class="nav-link">Pricing</a><a href="about.html" class="nav-link">About</a>
-          <button onclick="document.getElementById('login-form').style.display='block'" class="navigation-button">Login</button>
+          <button onclick="document.getElementById('login-form').style.display='block'" class="navigation-button"><span>Login</span></button>
         </nav>
         
         <div id="login-form" class="modal">
@@ -85,9 +86,9 @@
     </div>
     <div class="features wf-section">
         <div class="container">
-            <div class="h2-container">
-                <h2 class="h2"><strong class="bold-text">we offer a range of tools and resources to support you on your
-                        journey</strong>. From personalized workout and nutrition plans to virtual fitness classes and
+            <div class="h2-container hidden">
+                <h2 class="h2"><span class="text-span">we offer a range of tools and resources to support you on your
+                        journey</span> From personalized workout and nutrition plans to virtual fitness classes and
                     community support, we have everything you need to succeed. Explore our features below and start
                     building the body you've always wanted today!</h2>
             </div>
@@ -174,7 +175,7 @@
                         alt="" /></div>
                 <div class="_2-row-text">
                     <h2 class="h2 cc-2-rows"><span class="text-span">here i need to put content.</h2>
-                    <p class="paragraph cc-gray">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, quod hic.
+                    <p class="paragraph cc-gray hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, quod hic.
                          Ab, voluptatum distinctio sapiente nemo adipisci sit corrupti accusantium? Blanditiis ipsam deleniti iste
                           illo eos nostrum cumque adipisci explicabo.</p>
                 </div>
@@ -185,7 +186,7 @@
                         alt="" /></div>
                 <div class="_2-row-text cc-bottom">
                     <h2 class="h2 cc-2-rows"><span class="text-span">here i need to put content.</h2>
-                    <p class="paragraph cc-gray">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    <p class="paragraph cc-gray hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                         Sapiente praesentium placeat sunt eum quo impedit exercitationem nobis ea asperiores voluptas cupiditate ipsam odit neque error iure
                         , rerum dolorum voluptatibus quisquam.</p>
                 </div>
@@ -199,7 +200,7 @@
                     <div class="cta-line cc-header"></div>
                 </div>
                 <h2 class="h2 cc-white-text"><span class="text-span cc-white-text">Are you ready to take your fitness to the next level ?</span>Check out our paid programs</h2><br><br>
-                <a href="pricing.html" class="button cc-banner ">Go Premium</a>
+                <a href="pricing.html" class="button-premium cc-banner ">Go Premium</a>
             </div>
         </div>
     </div>
@@ -207,10 +208,10 @@
         <div class="container cc-cta">
             <div class="cta-column">
                 <div class="cta-left-top">
-                    <h3 class="h3 cc-cta">Party On</h3><br>
+                    <h3 class="h3 cc-cta hidden">Party On</h3><br>
                     <div class="cta-line"></div>
                 </div>
-                <h2 class="h2"><span class="text-span">You don't have to be great to start, but you have to start to be great</span> </h2>
+                <h2 class="h2"><span class="text-span hidden">You don't have to be great to start, but you have to start to be great</span> </h2>
             </div>
             <div class="cta-column"><a href="contact.html" class="button cc-cta ">Get Started</a></div>
         </div>

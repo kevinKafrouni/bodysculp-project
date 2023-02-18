@@ -9,6 +9,7 @@
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link href="styles.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script defer src="script.js"></script>
     <link href="img\logomain1.png" rel="shortcut icon" type="image/x-icon" />
 </head>
 
@@ -22,7 +23,7 @@
         <a href="features.html" class="nav-link">Features</a>
         <a href="pricing.html" class="nav-link">Pricing</a>
         <a href="about.html" class="nav-link">About</a>
-        <button onclick="document.getElementById('login-form').style.display='block'" class="navigation-button">Login</button>
+        <button onclick="document.getElementById('login-form').style.display='block'" class="navigation-button"><span>Login</span></button>
      </nav>
         <div id="login-form" class="modal">
         <form class="modal-content animate" action="/action_page.php" method="post">
@@ -75,7 +76,7 @@
                 <div class="inner-category"><a href="#" class="h3 cc-header">Pricing</a>
                     <div class="cta-line cc-header"></div>
                 </div>
-                <h1 class="h1">A payment plan for every occasion.</h1>
+                <h1 class="h1 hidden" >A payment plan for every occasion.</h1>
             </div>
         </div>
     </div>
@@ -202,10 +203,10 @@
         <div class="container cc-cta">
             <div class="cta-column">
                 <div class="cta-left-top">
-                    <h3 class="h3 cc-cta">Party On</h3><br>
+                    <h3 class="h3 cc-cta hidden">Party On</h3><br>
                     <div class="cta-line"></div>
                 </div><br>
-                <h2 class="h2"><span class="text-span">
+                <h2 class="h2 hidden"><span class="text-span">
                         <br><br>don't wait for tomorrow, start today.</span> </h2>
             </div>
             <div class="cta-column"><a href="contact.html" class="button cc-cta">Get Started</a></div>

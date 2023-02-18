@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous" />
     <link href="img\logomain1.png" rel="shortcut icon" type="image/x-icon"/>
+    <script defer src="script.js"></script>
 </head>
 
 <body>
@@ -23,7 +24,7 @@
         <a href="features.html" class="nav-link ">Features</a>
         <a href="pricing.html" class="nav-link ">Pricing</a>
         <a href="about.html" class="nav-link ">About</a>
-        <button onclick="document.getElementById('login-form').style.display='block'" class="navigation-button">Login</button>
+        <button onclick="document.getElementById('login-form').style.display='block'" class="navigation-button"><span>Login</span></button>
        </nav>
         <div id="login-form" class="modal">
         <form class="modal-content animate" action="/action_page.php" method="post">
@@ -101,26 +102,25 @@
             <div class="line-color"></div>
         </div>
     </div>
-    <div class="our-goals wf-section">
+    <h2 style="text-align: center;">Our Goals</h2>
+    <div class="our-goals">
+        
         <div class="container">
             <div class="goals-container">
                 <div class="goals-container-inner">
                     <div class="h3">01</div>
-                    <h2 class="h2 text-span">Stay curious</h2>
-                    <p class="paragraph cc-gray">Esse audiam assentior pri in, ius probatus singulis ne. Exerci fastidii
-                        duo ex, ex quo unum senserit.</p>
+                    <h2 class="h2 text-span hidden">improve and innovate</h2>
+                    <p class="paragraph cc-gray">to stay ahead of industry trends, setting new standards in fitness and providing exceptional value to customers</p>
                 </div>
                 <div class="goals-container-inner">
                     <div class="h3">02</div>
-                    <h2 class="h2 text-span">Be respectful</h2>
-                    <p class="paragraph cc-gray">Esse audiam assentior pri in, ius probatus singulis ne. Exerci fastidii
-                        duo ex, ex quo unum senserit.</p>
+                    <h2 class="h2 text-span">Build a strong community</h2>
+                    <p class="paragraph cc-gray hidden">Creating a supportive, inclusive fitness community to foster connections, accountability, and motivation for achieving health and wellness goals</p>
                 </div>
                 <div class="goals-container-inner">
                     <div class="h3">03</div>
-                    <h2 class="h2 text-span">Do good work</h2>
-                    <p class="paragraph cc-gray">Esse audiam assentior pri in, ius probatus singulis ne. Exerci fastidii
-                        duo ex, ex quo unum senserit.</p>
+                    <h2 class="h2 text-span hidden">Building Trust</h2>
+                    <p class="paragraph cc-gray">Providing high-quality service and products while maintaining integrity and professionalism to exceed customer expectations and build loyalty</p>
                 </div>
             </div>
         </div>
@@ -133,7 +133,7 @@
     <div class="team">
         <div class="container">
             <div class="h2-container">
-                <h2 class="h2"><span class="text-span">Meet the awesome team behind BodySculpt.</span> We’re bridging the gap
+                <h2 class="h2 hidden"><span class="text-span">Meet the awesome team behind BodySculpt.</span> We’re bridging the gap
                     between the world’s oldest and largest industry and a future where technology can be used to solve
                     our hardest problems.</h2>
             </div>
@@ -178,10 +178,10 @@
         <div class="container cc-cta">
             <div class="cta-column">
                 <div class="cta-left-top">
-                    <h3 class="h3 cc-cta">Party On</h3>
+                    <h3 class="h3 cc-cta hidden">Party On</h3>
                     <div class="cta-line"></div>
                 </div>
-                <h2 class="h2"><span class="text-span">Fitness is not about being better than someone else. It's about being better than you used to be.</span> </h2>
+                <h2 class="h2 hidden"><span class="text-span">Fitness is not about being better than someone else. It's about being better than you used to be.</span> </h2>
             </div>
             <div class="cta-column"><a href="contact.html" class="button cc-cta ">Get Started</a></div>
         </div>

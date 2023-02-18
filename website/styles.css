@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:900i');
 html{
   font-family:sans-serif;}
 body{
@@ -218,24 +219,6 @@ figcaption {
   background-color: #fff;
 }
 
-.navigation-button {
-  width: 20%;
-  margin-left: 15px;
-  border: 2px solid #fff;
-  border-radius: 4px;
-  background-color: transparent;
-  transition: background-color 200ms ease, color 200ms ease;
-  font-family: 'Libre Franklin', sans-serif;
-  color: #fff;
-  font-size: 14px;
-  line-height: 24px;
-  font-weight: 600;
-}
-
-.navigation-button:hover {
-  background-color: #fff;
-  color: #000;
-}
 
 .header-content {
   max-width: 770px;
@@ -2062,3 +2045,123 @@ span.psw {
         margin-top: 50px;
         margin-bottom: 50px;
     }
+
+
+    /*BUTTONS ANIMATIONS*/
+    /*premium button*/
+    .button-premium{
+      padding: 0.75em 2em;
+      text-align: center;
+      text-decoration: none;
+      font-weight: bold;
+      color: #fff;
+      border: 2px solid #fff;
+      font-size: 24px;
+      display: inline-block;
+      border-radius: 0.3em;
+      transition: all 0.2s ease-in-out;
+      position: relative;
+      overflow: hidden;}
+      .button-premium:before {
+        content: "";
+        background-color: rgba(255,255,255,0.5);
+        height: 100%;
+        width: 3em;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: -4.5em;
+        transform: skewX(-45deg) translateX(0);
+        transition: none;
+      }
+      .button-premium:hover {
+        background-color: #eead0e;
+        color: #fff;
+        border-bottom: 4px solid darken(#eead0e, 10%);}
+        .button-premium:hover:before {
+          transform: skewX(-45deg) translateX(13.5em);
+         transition: all 0.5s ease-in-out;
+        }
+      
+
+      /*login button*/
+
+      .navigation-button {
+        width: 20%;
+        margin-left: 15px;
+        border: 2px solid #fff;
+        border-radius: 4px;
+        background-color: transparent;
+        transition: background-color 200ms ease, color 200ms ease;
+        font-family: 'Libre Franklin', sans-serif;
+        color: #fff;
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 600;
+        overflow: hidden;
+        position: relative;
+        display: block;
+      }
+      .navigation-button:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 20;
+        height: 490%;
+        width: 140%;
+        background: #fff;
+        transition: all .5s ease-in-out;
+        transform: translateX(-98%) translateY(20%) rotate(-45deg);
+      }
+      .navigation-button span{
+        position: relative; 
+        z-index: 1;
+        color: #000;
+        font-weight: bolder;
+      }
+      
+      .navigation-button:hover:after {
+        transform: translateX(-9%) translateY(-30%) rotate(-45deg);
+      }
+
+      /*Get started buttons*/
+      
+      .get-started-button{
+        text-align: center;
+        background:#eead0e;
+        color:#fff;
+        border:none;
+        border-radius: 4px;
+        position:relative;
+        height:60px;
+        font-size:1.4em;
+        padding:0 1.2em;
+        cursor:pointer;
+        transition:800ms ease all;
+        outline:none;
+        font-weight: 800;
+      }
+      .get-started-button:hover{
+        background:#fff;
+        color:#eead0e;
+      }
+     .get-started-button:before,.get-started-button:after{
+        content:'';
+        position:absolute;
+        top:0;
+        right:0;
+        height:2px;
+        width:0;
+        background: #eead0e;
+        transition:400ms ease all;
+      }
+      .get-started-button:after{
+        right:inherit;
+        top:inherit;
+        left:0;
+        bottom:0;
+      }
+      .get-started-button:hover:before,.get-started-button:hover:after{
+        width:100%;
+        transition:800ms ease all;
+      }
