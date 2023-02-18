@@ -408,6 +408,7 @@ figcaption {
 
 .h2.text-span.cc-post-text {
   margin-bottom: 15px;
+  width: 100%;
 }
 
 .h2-container {
@@ -746,6 +747,7 @@ figcaption {
 
 .collection-item {
   width: 33.33333333%;
+  min-width: 400px;
   padding-right: 10px;
   padding-left: 10px;
 }
@@ -1998,3 +2000,65 @@ span.psw {
     width: 100%;
  }
 }
+
+
+.blog-posts-item {
+  display: flex;
+  width: 30%;
+  min-width: 300px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 5px;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+}
+
+.blog-posts {
+  display: flex;
+  margin-top: -120px;
+  margin-bottom: 120px;
+  padding-right: 30px;
+  padding-left: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.post-list {
+  display: flex;
+  margin: -10px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-content: stretch;
+}
+
+.blog-posts-item-container {
+  justify-content: center;
+  width: 300px;
+  flex-wrap: wrap;;
+  align-items: center;
+  align-content: center;
+  background-color: #fff;
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.05);
+  text-decoration: none;
+}
+
+/*BLOG PAGES*/
+
+.blog-body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  color: #333333;
+}
+    
+    .blog-page {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #ffffff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
