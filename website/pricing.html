@@ -2,6 +2,15 @@
 <html lang="en">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-02MC3V481G"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-02MC3V481G');
+    </script>
     <meta charset="utf-8" />
     <title>Pricing</title>
     <meta content="Pricing" property="og:title" />
@@ -23,7 +32,7 @@
         <a href="features.html" class="nav-link">Features</a>
         <a href="pricing.html" class="nav-link">Pricing</a>
         <a href="about.html" class="nav-link">About</a>
-        <button onclick="document.getElementById('login-form').style.display='block'" class="navigation-button"><span>Login</span></button>
+        <button onclick="show('login-form')" class="navigation-button"><span>Login</span></button>
      </nav>
         <div id="login-form" class="modal">
         <form class="modal-content animate" action="/action_page.php" method="post">
@@ -36,8 +45,8 @@
             <label><input type="checkbox" checked="checked" name="remember"> Remember me</label>
             </div>
             <div class="container" style="background-color:#f1f1f1">
-            <button type="button" onclick="document.getElementById('login-form').style.display='none'" class="cancelbtn">Cancel</button>
-            <span class="psw"><button class="newaccbtn" onclick="document.getElementById('login-form').style.display='none';document.getElementById('signup-form').style.display='block';"> Create a new account</button></span>
+            <button type="button" onclick="hide('login-form')" class="cancelbtn">Cancel</button>
+            <span class="psw"><button class="newaccbtn" onclick="hide('login-form');show('signup-form')"> Create a new account</button></span>
             </div>
         </form>
         </div>
@@ -59,12 +68,12 @@
             <input type="password" placeholder="Enter Password" name="psw" class ="account-input" required>
             <label for="mail"><b>Email</b></label>
             <input type="Email" placeholder="fit@gmail.com" name="mail" class ="account-input" required>
-            <button type="submit" onclick="document.getElementById('login-form').style.display='block';document.getElementById('signup-form').style.display='none';">Login</button>
+            <button type="submit" onclick="hide('signup-form');show('login-form')">Login</button>
             <label><input type="checkbox" checked="checked" name="remember"> Remember me</label><br>
             <label><input type="checkbox" name="mailbox"> Receive Emails</label>
             </div>
             <div class="container" style="background-color:#f1f1f1">
-            <button type="button" onclick="document.getElementById('signup-form').style.display='none'" class="cancelbtn">Cancel</button>
+            <button type="button" onclick="hide('signup-form')" class="cancelbtn">Cancel</button>
             </div>
         </form>
         </div>
@@ -209,7 +218,7 @@
                 <h2 class="h2 hidden"><span class="text-span">
                         <br><br>don't wait for tomorrow, start today.</span> </h2>
             </div>
-            <div class="cta-column"><a href="contact.html" class="button cc-cta">Get Started</a></div>
+            <div class="cta-column"><a href="contact.html" class="get-started-button cc-cta">Get Started</a></div>
         </div>
     </div>
     <div class="footer ">

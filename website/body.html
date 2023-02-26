@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-02MC3V481G"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-02MC3V481G');
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>body</title>
+    <script>
+        function show(workoutId){
+            document.getElementById(workoutId).style.display='block'
+        }
+    </script>
+</head>
+<body>
+    <div class="container-body">
+    <img src="..\website\img\body.jpg" alt="" class="body-sketch">
+    <button class="chess-right" onclick="show('chess')"></button>
+    <button class="chess-left" onclick="show('chess')"></button>
+    <button class="biceps-right" onclick="show('biceps')"></button>
+    <button class="biceps-left" onclick="show('biceps')"></button>
+    <button class="leg-right" onclick="show('legs')"></button>
+    <button class="leg-left" onclick="show('legs')"></button>
+    <button class="abs" onclick="show('abs')"></button>
+</div>
+
+    <div class="chess-workout workout" id="chess">
+        <div class="ex">
+            <img src="" alt="">
+            <h4>pushups</h4>
+        </div>
+        <div class="ex">
+            <img src="" alt="">
+            <h4>sholder-press</h4>
+        </div>
+        <div class="ex">
+            <img src="" alt="">
+            <h4>plank rotation</h4>
+        </div>
+    </div>
+
+    <div class="biceps-workout workout" id="biceps">
+        <div class="ex">
+            <img src="" alt="">
+            <h4>dumbel curls</h4>
+        </div>
+        <div class="ex">
+            <img src="" alt="">
+            <h4>pushups</h4>
+        </div>
+        <div class="ex">
+            <img src="" alt="">
+            <h4>chin-up</h4>
+        </div>
+    </div>
+    <div class="legs-workout workout" id="legs">
+        <div class="ex">
+            <img src="" alt="">
+            <h4>squats</h4>
+        </div>
+        <div class="ex">
+            <img src="" alt="">
+            <h4>lunges</h4>
+        </div>
+        <div class="ex">
+            <img src="" alt="">
+            <h4>climbers</h4>
+        </div>
+    </div>
+    <div class="abs-workout workout" id="abs">
+        <div class="ex">
+            <img src="" alt="">
+            <h4>sit-ups</h4>
+        </div>
+        <div class="ex">
+            <img src="" alt="">
+            <h4>bicycle crunches</h4>
+        </div>
+        <div class="ex">
+            <img src="" alt="">
+            <h4>leg raises</h4>
+        </div>
+    </div>
+</body>
+</html>

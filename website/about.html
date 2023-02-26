@@ -2,6 +2,15 @@
 <html lang="en">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-02MC3V481G"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-02MC3V481G');
+    </script>
     <meta charset="utf-8" />
     <title>About</title>
     <meta content="About" property="og:title" />
@@ -24,7 +33,7 @@
         <a href="features.html" class="nav-link ">Features</a>
         <a href="pricing.html" class="nav-link ">Pricing</a>
         <a href="about.html" class="nav-link ">About</a>
-        <button onclick="document.getElementById('login-form').style.display='block'" class="navigation-button"><span>Login</span></button>
+        <button onclick="show('login-form')" class="navigation-button"><span>Login</span></button>
        </nav>
         <div id="login-form" class="modal">
         <form class="modal-content animate" action="/action_page.php" method="post">
@@ -37,8 +46,8 @@
             <label><input type="checkbox" checked="checked" name="remember"> Remember me</label>
             </div>
             <div class="container" style="background-color:#f1f1f1">
-            <button type="button" onclick="document.getElementById('login-form').style.display='none'" class="cancelbtn">Cancel</button>
-            <span class="psw"><button class="newaccbtn" onclick="document.getElementById('login-form').style.display='none';document.getElementById('signup-form').style.display='block';"> Create a new account</button></span>
+            <button type="button" onclick="hide('login-form')" class="cancelbtn">Cancel</button>
+            <span class="psw"><button class="newaccbtn" onclick="hide('login-form');show('signup-form');"> Create a new account</button></span>
             </div>
         </form>
         </div>
@@ -60,19 +69,19 @@
             <input type="password" placeholder="Enter Password" name="psw" class ="account-input" required>
             <label for="mail"><b>Email</b></label>
             <input type="Email" placeholder="fit@gmail.com" name="mail" class ="account-input" required>
-            <button type="submit" onclick="document.getElementById('login-form').style.display='block';document.getElementById('signup-form').style.display='none';">Login</button>
+            <button type="submit" onclick="show('login-form');hide('signup-form');">Login</button>
             <label><input type="checkbox" checked="checked" name="remember"> Remember me</label><br>
             <label><input type="checkbox" name="mailbox"> Receive Emails</label>
             </div>
             <div class="container" style="background-color:#f1f1f1">
-            <button type="button" onclick="document.getElementById('signup-form').style.display='none'" class="cancelbtn">Cancel</button>
+            <button type="button" onclick="hide('signup-form')" class="cancelbtn">Cancel</button>
             </div>
         </form>
         </div>
     
     </div>
   </div>
-    <div class="header-inner cc-header-extra wf-section">
+    <div class="header-inner cc-header-extra">
         <div class="container">
             <div class="header-inner-content">
                 <div class="inner-category"><a href="#" class="h3 cc-header">About</a>
@@ -83,11 +92,8 @@
         </div>
     </div>
     <div class="header-banner">
-        <div class="premium-image-banner"><img
-                src="img\fittrr.png"
-                alt="" /></div>
     </div>
-    <div class="about-intro wf-section">
+    <div class="about-intro">
         <div class="container cc-center">
             <div class="h2-container cc-center">
                 <h2 class="h2 cc-center"><span class="text-span">We believe that fitness should be accessible, enjoyable, and effective.</span>
@@ -97,7 +103,7 @@
             </div>
         </div>
     </div>
-    <div class="separator wf-section">
+    <div class="separator">
         <div class="container">
             <div class="line-color"></div>
         </div>
@@ -125,7 +131,7 @@
             </div>
         </div>
     </div>
-    <div class="separator wf-section">
+    <div class="separator">
         <div class="container">
             <div class="line-color"></div>
         </div>
@@ -174,7 +180,7 @@
             </div>
         </div>
     </div>
-    <div class="cta wf-section">
+    <div class="cta">
         <div class="container cc-cta">
             <div class="cta-column">
                 <div class="cta-left-top">
@@ -183,7 +189,7 @@
                 </div>
                 <h2 class="h2 hidden"><span class="text-span">Fitness is not about being better than someone else. It's about being better than you used to be.</span> </h2>
             </div>
-            <div class="cta-column"><a href="contact.html" class="button cc-cta ">Get Started</a></div>
+            <div class="cta-column"><a href="contact.html" class="get-started-button cc-cta ">Get Started</a></div>
         </div>
     </div>
     <div class="footer ">

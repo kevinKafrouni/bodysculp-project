@@ -1,10 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-02MC3V481G"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-02MC3V481G');
+    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="..\styles.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="C:\Users\kevin\Desktop\website\bodysculp-project\website\script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+    <script src="path/to/xlsx.full.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js"></script>
     <title>7 Common Deadlift Mistakes to Avoid</title>
 </head>
 <body class="blog-body">
@@ -34,7 +48,57 @@
         <p>Breathing properly is important for maintaining proper form and avoiding injury. Take a deep breath before you lift the weight, and exhale as you reach the top of the lift. Avoid holding your breath or exhaling too early, as this can affect your form and lead to injury.</p>
     
         <p>By avoiding these common mistakes, you can safely and effectively perform the deadlift and achieve your strength training goals. Remember to start with a light weight and gradually increase the weight as you become more comfortable with the movement. Good luck!</p>
-    
+
+    <div class="modal" id="popup">
+        <div class="popup">
+            <button class="closebutn" onclick="closepopup()">
+                <span class="x">X</span>
+            </button>
+            <h4>Check out this FREE workout!!</h4>
+            <p>improve your strength with this workout download now for free</p>
+            <table class="workout-table" id="workout">
+                <thead>
+                    <title>Full body begginers workout</title>
+                    <tr>
+                        <th>Exercice</th>
+                        <th>Set</th>
+                        <th>Rep</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>squat</td>
+                        <td>3</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>pushups</td>
+                        <td>3</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>lunges</td>
+                        <td>3</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>triceps dip</td>
+                        <td>3</td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td>leg raises</td>
+                        <td>3</td>
+                        <td>12</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div>
+                <button class="downloadbtn" onclick="exportTableToExcel('workout','workout.xlsx')"><i class="fa fa-download"></i>Download</button>
+                <button class="previewbtn" onclick="show('workout')">preview</button>
+            </div>
+        </div>
+    </div>
     
 </body>
 </html>

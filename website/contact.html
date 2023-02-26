@@ -2,6 +2,14 @@
 <html lang="en">
 
 <head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-02MC3V481G"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-02MC3V481G');
+  </script>
     <meta charset="utf-8" />
     <title>Contact</title>
     <meta content="Contact" property="og:title" />
@@ -21,7 +29,7 @@
           alt="" /></a>
       <nav role="navigation" class="nav-menu"><a href="features.html" class="nav-link">Features</a><a href="pricing.html"
           class="nav-link">Pricing</a><a href="about.html" class="nav-link">About</a>
-          <button onclick="document.getElementById('login-form').style.display='block'" class="navigation-button"><span>Login</span></button>
+          <button onclick="show('login-form')" class="navigation-button"><span>Login</span></button>
         </nav>
         
         <div id="login-form" class="modal">
@@ -35,8 +43,8 @@
                 <label><input type="checkbox" checked="checked" name="remember"> Remember me</label>
               </div>
               <div class="container" style="background-color:#f1f1f1">
-                <button type="button" onclick="document.getElementById('login-form').style.display='none'" class="cancelbtn">Cancel</button>
-                <span class="psw"><button class="newaccbtn" onclick="document.getElementById('login-form').style.display='none';document.getElementById('signup-form').style.display='block';"> Create a new account</button></span>
+                <button type="button" onclick="hide('login-form')" class="cancelbtn">Cancel</button>
+                <span class="psw"><button class="newaccbtn" onclick="hide('login-form');show('signup-form');"> Create a new account</button></span>
               </div>
             </form>
           </div>
@@ -58,12 +66,12 @@
                 <input type="password" placeholder="Enter Password" name="psw" class ="account-input" required>
                 <label for="mail"><b>Email</b></label>
                 <input type="Email" placeholder="fit@gmail.com" name="mail" class ="account-input" required>
-                <button type="submit" onclick="document.getElementById('login-form').style.display='block';document.getElementById('signup-form').style.display='none';">Login</button>
+                <button type="submit" onclick="show('login-form');hide('signup-form');">Login</button>
                 <label><input type="checkbox" checked="checked" name="remember"> Remember me</label><br>
                 <label><input type="checkbox" name="mailbox"> Receive Emails</label>
               </div>
               <div class="container" style="background-color:#f1f1f1">
-                <button type="button" onclick="document.getElementById('signup-form').style.display='none'" class="cancelbtn">Cancel</button>
+                <button type="button" onclick="hide('signup-form')" class="cancelbtn">Cancel</button>
               </div>
             </form>
           </div>
@@ -109,13 +117,8 @@
                             id="name" /><input type="email" class="text-field" maxlength="256" name="email"
                             data-name="Email" placeholder="Email" id="email" required="" /><input type="text"
                             class="text-field" maxlength="256" name="message" data-name="message"
-                            placeholder="Tell us all about it" id="message" required="" /><input type="submit"
-                            value="Submit" data-wait="Please wait..." class="button" /></form>
-                    <div class="w-form-done">
-                        <div>Thank you! Your submission has been received!</div>
-                    </div>
-                    <div class="w-form-fail">
-                        <div>Oops! Something went wrong while submitting the form.</div>
+                            placeholder="Tell us all about it" id="message" required="" />
+                            <input type="submit" value="Submit" data-wait="Please wait..." class="get-started-button" /></form>
                     </div>
                 </div>
             </div>

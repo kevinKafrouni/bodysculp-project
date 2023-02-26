@@ -1,3 +1,9 @@
+.add{
+  font-size: larger;
+  font-weight: bold;
+  color: royalblue;
+  text-decoration: none;
+}
 @import url('https://fonts.googleapis.com/css?family=Poppins:900i');
 html{
   font-family:sans-serif;}
@@ -5,6 +11,7 @@ body{
   margin:0;
   font-feature-settings: "liga" on;
   text-rendering: optimizeLegibility;
+  overflow-x: hidden;
 }
 a{
   background-color:transparent;
@@ -107,24 +114,28 @@ img {
   max-width: 100%;
 }
 
-blockquote {
-  margin-bottom: 10px;
-  padding: 10px 20px;
-  border-color: #5ab963 #5ab963 #5ab963 #e6e6e6;
-  border-left-style: solid;
-  border-left-width: 5px;
-  font-family: 'IBM Plex Mono', sans-serif;
-  color: #000;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
-}
-
 figcaption {
   margin-top: 5px;
   text-align: center;
 }
+table{
+  border: 2px solid black;
+  width: 200px;
+  margin: auto;
+}
+td{
+  border: 1px solid black;
+  width: 90px;
+}
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
 
+th {
+  background-color: #04AA6D;
+  border: 1px solid black;
+  color: white;
+}
 
 .hidden{
   opacity: 0;
@@ -137,6 +148,7 @@ figcaption {
   filter: blur(0);
   transform: translateX(0);
 }
+
 /*AFFECTS ALL THE HMTL PAGES*/
 /*affect only main.html */
 /*affect only pricing.html */
@@ -1322,6 +1334,10 @@ figcaption {
 }
 
 /* sign in pop up form style */
+.form-container{
+  z-index: 99;
+  background-color: white;
+}
 .account-input{
   width: 100%;
   padding: 12px 20px;
@@ -1329,6 +1345,7 @@ figcaption {
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
+  z-index: 20;
 }
 button {
   background-color: #eead0e;
@@ -1338,6 +1355,7 @@ button {
   border: none;
   cursor: pointer;
   width: 100%;
+  z-index: 20;
 }
 
 button:hover {
@@ -1348,11 +1366,13 @@ button:hover {
   width: auto;
   padding: 10px 18px;
   background-color: #f44336;
+  z-index: 20;
 }
 .newaccbtn {
   width: auto;
   padding: 10px 18px;
   background-color: gray;
+  z-index: 99;
 }
 .imgcontainer {
   text-align: center;
@@ -1426,6 +1446,7 @@ span.psw {
   .header {
     padding-right: 60px;
     padding-left: 60px;
+    max-width: 991px;
   }
 
   .bullet {
@@ -1614,14 +1635,12 @@ span.psw {
 
 @media screen and (max-width: 767px) {
   .header {
-    height: 600px;
+    height: 200px;
     padding-right: 30px;
     padding-left: 30px;
+    max-width: 767px;
   }
 
-  .navigation-links {
-    display: none;
-  }
 
   .h1 {
     font-size: 48px;
@@ -2165,3 +2184,176 @@ span.psw {
         width:100%;
         transition:800ms ease all;
       }
+
+      .popup{
+        background-color: #fff;
+        width: 500px;
+        margin: auto;
+        border-radius: 6px;
+        text-align: center;
+        padding: 0 30px 30px 0;
+      }
+      
+      .closebutn{
+        background-color:  #263238;
+        box-shadow: 0 0 20px -5px rgba(white,.5);
+        margin-top: -50px;
+        margin-left:100% ;
+        border: 0;
+        padding: 0;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+      }
+      .x{
+        font-size: 30px;
+      }
+
+      .downloadbtn{
+        background-color: DodgerBlue;
+        border: none;
+        color: white;
+        padding: 12px 20px;
+        cursor: pointer;
+        font-size: 15px;
+        width: 150px;
+        height: 50px;
+      }
+
+      .downloadbtn:hover{
+        background-color: RoyalBlue;
+      }
+
+      .previewbtn{
+        background-color: #48944f;
+        border: none;
+        color: white;
+        padding: 12px 20px;
+        cursor: pointer;
+        font-size: 15px;
+        width: 150px;
+        height: 50px;
+      }
+      #workout{
+        display: none;
+      }
+
+
+
+  .body-sketch{
+    width:100% ;
+    height: 100%;
+}
+.container-body{
+    height: 500PX;
+    width: 200px;
+    position: fixed;
+    top: 10%;
+    left: 50%;
+}
+
+.workout{     
+    background-color: #fff;
+    width: 500px;
+    margin: auto;
+    border-radius: 6px;
+    text-align: center;
+    padding: 0 30px 30px 0;
+    display: none;
+    z-index: 100;
+
+}
+.chess-right:hover,
+.chess-left:hover,
+.biceps-right:hover,
+.biceps-left:hover,
+.leg-left:hover,
+.leg-right:hover,
+.abs:hover
+  {
+    background-color: rgba(255, 0, 0, 0.5);
+}
+.chess-right{
+    position: absolute;
+    top: 18.5%;
+    left: 16%;
+    width: 60px;
+    height: 60px;
+    border-radius: 90% 40% 40% 50% ;
+    background-color:transparent;
+    cursor: pointer;
+    z-index: 50;
+}
+
+.chess-left {
+    position: absolute;
+    top: 18.5%;
+    left: 47.8%;
+    width: 60px;
+    height: 60px;
+    border-radius: 40% 90% 50% 40%;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 50;
+    }
+
+
+
+.biceps-right{
+    position: absolute;
+    top: 22.5%;
+    left: 2.2%;
+    width: 20px;
+    height: 60px;
+    border-radius: 100% 100% 80% 60% ;
+    background-color:transparent;
+    cursor: pointer;
+    z-index: 50;
+}
+.biceps-left{
+    position: absolute;
+    top: 24.5%;
+    left: 77.8%;
+    width: 30px;
+    height: 60px;
+    border-radius: 100% 100% 60% 80% ;
+    background-color:transparent;
+    cursor: pointer;
+    z-index: 50;
+}
+
+.leg-right{
+    position: absolute;
+    top: 51.5%;
+    left: 23%;
+    width: 50px;
+    height: 110px;
+    border-radius: 30% 100% 80% 100% ;
+    background-color:white;
+    cursor: pointer;
+    z-index: 50;
+}
+.leg-left{
+    position: absolute;
+    top: 51.5%;
+    left: 47.9%;
+    width: 50px;
+    height: 110px;
+    border-radius: 100% 30% 100% 80% ;
+    background-color:white;
+    cursor: pointer;
+    z-index: 50;
+}
+
+.abs{
+    position: absolute;
+    top: 30.4%;
+    left: 30%;
+    width: 69px;
+    height: 110px;
+    border-radius: 20% 20% 60% 60%;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 50;
+
+}
