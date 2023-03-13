@@ -30,7 +30,7 @@
   /*program popup*/
   setTimeout(function() {
     document.getElementById('popup').style.display='block';
-  }, 3000); // 10000 milliseconds = 10 seconds
+  }, 5000); // 10000 milliseconds = 10 seconds
   
 
   function closepopup(){
@@ -57,6 +57,8 @@
     downloadLink.click();
   }
 
+
+  /*exporting to pdf */ // NOT WORKING
   function exportTableToPDF(tableId, filename = ''){
     var table = document.getElementById(tableId);
     var tableRows = table.getElementsByTagName('tr');
@@ -100,3 +102,46 @@
     pdf.save(filename);
   }
   
+  //select country 
+  var select = document.getElementById("country");
+var url = "https://restcountries.com/v3.1/all"; // Replace with the API URL
+fetch(url)
+  .then(response => response.json())
+  .then(data => {
+    data.forEach(country => {
+      var option = document.createElement("option");
+      option.value = country.name.common;
+      option.text = country.name.common;
+      select.add(option);
+    });
+  });
+
+
+
+
+  //back to top
+  //Get the button
+let mybutton = document.getElementById("btn-back-to-top");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (
+    document.body.scrollTop > 20 ||
+    document.documentElement.scrollTop > 20
+  ) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+// When the user clicks on the button, scroll to the top of the document
+mybutton.addEventListener("click", backToTop);
+
+function backToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
